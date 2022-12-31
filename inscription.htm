@@ -1,0 +1,74 @@
+<html>
+
+<!------------>
+<head> 
+<!-- table de caractères FR avec accents et ç -->
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<!-- lien vers la feuille de style -->
+<link href='../styles/test.css' type='text/css' rel='stylesheet'> 
+</head>
+<!------------>
+
+<body>
+    
+	<style>
+		body {
+		background-color: #1c1a1d;
+		}
+		</style>
+
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+
+            <button type="button" class="toggle-btn" onclick="login()">Connexion</button>
+            <button type="button" class="toggle-btn" onclick="register()">Inscription</button>
+
+        </div>
+        <form id="login" class="input-group" action="../modeles/EXO2_validationLogin.php" method="post">
+            <input type="text" class="input-field" placeholder="Identifiant" name="identifiant" required>
+            <input type="password" class="input-field" placeholder="Mot de passe" name="motDePasse" required>
+            <input type="checkbox" class="check-box"> <span>Se souvenir de moi</span>
+            <button type="submit" class="submit-btn" name="soumettre">Connexion</button>
+        </form>
+            <form id="register" class="input-group" action="../modeles/NomProgrammePHPQuivatraiterlesdonnees.php" method="post">
+                    <input type="text" class="input-field" placeholder="nom" name="nom" required>
+                    <input type="text" class="input-field" placeholder="prenom" name="prenom"required>
+                    <input type="text" class="input-field" placeholder="Identifiant" name="identifiant" required>
+                    <input type="email" class="input-field" placeholder="E-mail" name="email" required>
+                    <input type="password" class="input-field" placeholder="Mot de passe" name="motDePasse" required>
+                    <input type="password" class="input-field" placeholder= "Confirmer votre mot de passe" name="CmotDePasse" required>
+                    <input type="checkbox" class="check-box2"> <span>J'accepte vos Conditions générales et Politique de confidentialité</span>
+                    <button type="submit" class="submit-btn" name="soumettre">Inscription</button>
+            </form>
+
+        </form>
+    </div>
+</div>
+
+
+<script>
+var x = document.getElementById("login");
+var y = document.getElementById("register");
+var z = document.getElementById("btn");
+
+function register(){
+    x.style.left = "-400px";
+    y.style.left = "50px";
+    z.style.left = "110px";
+}
+
+function login(){
+    x.style.left = "50px";
+    y.style.left = "450px";
+    z.style.left = "0px";
+}
+
+</script>
+
+
+
+
+</body>
+</html>
